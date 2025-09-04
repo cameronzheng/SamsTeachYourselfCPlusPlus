@@ -1,0 +1,66 @@
+What is an array?
+Array characteristics:
+- An array is a collection of elements
+- All elements contained in an array are of the same kind
+- This collection forms a complete set
+--------------------------------------------------------------------------------------------------------------------------------------
+Array Declaration:
+--------------------------------------------------------------------------------------------------------------------------------------
+- Static Arrays (number of elements are fixed at the time of compilation)
+  int myNums[5];  // array of integers
+  char myChars[5]; // array of characters
+
+  ElementType arrayName[constant_number of elements] = {optional initial values};
+
+  int myNums[5] = {34, 56, -21, 5002, 365};
+  int muNums[5] = {};   // initialize all integers to 0
+  int myNums[5] = {34, 56}; // initialize first two elements and the rest to 0
+
+  // only if you know the initial values of the elemnts in the array
+  int myNums[] = {2016, 2052, -525}; // array of 3 elements
+
+
+In general, the amoutn of memory reserved by the compiler for an array in bytes is:
+  Bytes consumed by an array = sizeof(element-type) * Number of elements
+
+Arrays are zero-based index. Meaning the first element in an array is at index 0.
+
+
+Using looops to access array elements.
+--------------------------------------------------------------------------------------------------------------------------------------
+Do and Don't:
+--------------------------------------------------------------------------------------------------------------------------------------
+Do:
+  - Remember that the first element in an array is accessed at index 0
+  - Ensure that arrays are used within their defined boundaries
+
+Don't:
+  - Ever acces the Nth element using index N in an array of N elements. Use index (N - 1) or (Length - 1)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Multidimensional Arrays
+--------------------------------------------------------------------------------------------------------------------------------------
+Declaration and Initialization of Multidimensional Arrays:
+  int solarPanels[2][3];
+  int solarPanels[2][3] = {{0, 1, 2}, {3, 4, 5}};
+  int threeRowsThreeColumns[3][3] = {{-501, 206, 2016}, {989, 101, 206}, {303, 456, 596}};
+
+  Note: You can initialize a Multidimensional array as:
+    int solarPanels[2][3] = {0, 1, 2, 3, 4, 5};
+
+    - However, the earlier method is better since it's easier to imagine and understand multidimensional arrays as an array of arrays
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Accessing Elements in a Multidimensional Array
+--------------------------------------------------------------------------------------------------------------------------------------
+int threeRowsThreeColumns[3][3] = {{-501, 206, 2016}, {989, 101, 206}, {303, 456, 596}};
+
+- To access the above multidimensional array, use a first subscript [] to address the array where the integer is and a second 
+  subscript [] to address that integer in this array
+
+threeRowsThreeColumns[2][1] -> 456
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Dynamic Arrays
+--------------------------------------------------------------------------------------------------------------------------------------

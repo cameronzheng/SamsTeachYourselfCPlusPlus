@@ -1,0 +1,27 @@
+-------------------- QUIZ Questions --------------------
+1. What is the difference between a signed integer and an unsigned integer?
+2. Why should you not use #define to declare a constant?
+3. Why would you initialize a variable?
+4. Consider the enum below. What is the value of Queen?
+  enum YourCards {Ace, Jack, Queen, King};
+5. What is wrong with this variable name?
+  int Integer = 0;
+--------------------------------------------------------
+
+--------------------- QUIZ Answers ---------------------
+1. In a signed integer, the most-significant bit (MSB) functions as the sign bit
+   and indicates whether a value should be positive or negaitve. An unsigned integer
+   is used to contain only positive integer values.
+  
+2. #define is a preprocessor directive that directs the compiler to do a text replacement 
+   wherever the defined value is seen. However, it is not type safe, and using #define is 
+   a primative way of defining constants. Therefore, it is to be avoided.
+
+3. To ensure that it contains a definite, non-random value.
+
+4. 2. Ace = 0, Jack = 1, Queen = 2, King = 3
+
+5. There is nothing wrong syntactically, but the name is nondescriptive and not reader friendly.
+   It is better declared using a name that reveals its purpose. 
+   Ex. int age = 0;
+--------------------------------------------------------
